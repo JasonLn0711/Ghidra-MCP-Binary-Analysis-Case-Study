@@ -16,10 +16,6 @@
 
 This repository is a compact reverse-engineering case study built around GhidraMCP. It demonstrates how to drive Ghidra through MCP-accessible tooling, inspect a Linux crackme, recover the correct key from validation logic, and verify the result by executing the binary.
 
-## Suggested Repository Name
-
-`ghidra-mcp-binary-analysis-case-study`
-
 ## Author
 
 - **Name:** Jason Chia-Sheng Lin
