@@ -112,17 +112,38 @@ Verify the recovered key against the sample binary:
 
 ```text
 .
-|-- README.md
+|-- LICENSE                              # MIT license for this repository
+|-- README.md                            # Project overview, workflow, and usage notes
+|-- requirements.txt                     # Python dependencies for helper automation
 |-- config/
 |   `-- ghidra_tools/
+|       `-- code_browser_mcp.tcd         # MCP-enabled Ghidra CodeBrowser tool config
 |-- docs/
-|   |-- case-study.md
+|   |-- case-study.md                    # Written walkthrough of the binary analysis process
 |   `-- screenshots/
+|       |-- 00_codebrowser_mcp_loaded.png
+|       |-- 00_frontend_server_started.png
+|       |-- 01_task0_tool_call_live.png
+|       |-- 02_task1_functions_live.png
+|       |-- 03_task1_key_format_live.png
+|       |-- 04_task2_strings_xrefs_live.png
+|       |-- 05_task2_key_recovery_live.png
+|       `-- 06_task3_flag_live.png       # Evidence screenshots from the live analysis session
 |-- ghidra_scripts/
+|   `-- export_analysis_evidence.py      # Ghidra Jython export helper for functions and xrefs
 |-- sample/
+|   `-- crackme_mcp                      # Target ELF crackme binary analyzed in this case study
 `-- scripts/
+    |-- capture_live_demo.py             # Automation for capturing screenshots and local reports
+    `-- solve_crackme.py                 # Standalone solver that reconstructs the key and flag
 ```
 
 ## Local-Only Artifacts
 
 Large downloads, local Ghidra projects, generated PDFs, and coursework submission files are intentionally kept under `.local/` and excluded from version control so the public repository stays focused and interview-ready.
+
+## License
+
+This repository is released under the MIT License. See [LICENSE](LICENSE) for the full license text.
+
+Unless otherwise noted, the license covers the source code, automation scripts, documentation, screenshots, and included sample artifacts that are authored and distributed in this repository. Third-party tools and projects referenced by this case study, such as Ghidra and other external dependencies, remain subject to their own licenses and terms.
